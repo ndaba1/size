@@ -11,7 +11,6 @@ fn main() -> Result<(), std::io::Error> {
     let target = Path::join(&current.as_path(), &args[1]);
     let size = read_size(&target)?;
 
-    // let meta = std::fs::metadata(&target).unwrap();
     let size = size / 1_000_000;
     println!("{} is of size {}MB", target.display(), size);
 
